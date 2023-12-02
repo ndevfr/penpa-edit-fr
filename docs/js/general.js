@@ -62,7 +62,7 @@ function boot() {
 
 function getParameterByName(name) {
   var url = new URL(window.location.href);
-  return url.searchParams.get("name");
+  return url.searchParams.get(name);
 }
 
 function boot_parameters() {
@@ -74,8 +74,9 @@ function boot_parameters() {
   document.getElementById("nb_space2").value = 0;
   document.getElementById("nb_space3").value = 0;
   document.getElementById("nb_space4").value = 0;
-  document.getElementById("saveimagename").value =
-    "Enigme" + getParameterByName("e");
+  document.getElementById("saveimagename").value = getParameterByName("e")
+    ? "Enigme" + getParameterByName("e")
+    : "MonEnigme";
 }
 
 function create() {
