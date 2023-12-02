@@ -60,6 +60,11 @@ function boot() {
   }
 }
 
+function getParameterByName(name) {
+  var url = new URL(window.location.href);
+  return url.searchParams.get("name");
+}
+
 function boot_parameters() {
   UserSettings.gridtype = "square";
   document.getElementById("nb_size1").value = 10;
@@ -69,7 +74,8 @@ function boot_parameters() {
   document.getElementById("nb_space2").value = 0;
   document.getElementById("nb_space3").value = 0;
   document.getElementById("nb_space4").value = 0;
-  //document.getElementById("saveimagename").value = "Enigme"+getParameterByName("e");
+  document.getElementById("saveimagename").value =
+    "Enigme" + getParameterByName("e");
 }
 
 function create() {
