@@ -60,6 +60,17 @@ function boot() {
   }
 }
 
+function getParameterByName(name) {
+  name = name.replace(/[[]/, [).replace(/[]]/, ]);
+  var regexS = [?&] + name + =([^&#]*);
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+  return ;
+  else
+  return decodeURIComponent(results[1].replace(/+/g, ));
+}
+
 function boot_parameters() {
   UserSettings.gridtype = "square";
   document.getElementById("nb_size1").value = 10;
@@ -69,6 +80,7 @@ function boot_parameters() {
   document.getElementById("nb_space2").value = 0;
   document.getElementById("nb_space3").value = 0;
   document.getElementById("nb_space4").value = 0;
+  document.getElementById("saveimagename").value = "Enigme"+getParameterByName("e");
 }
 
 function create() {
@@ -2111,7 +2123,6 @@ function show_shortcuts() {
 
 function load(urlParam, type = "url", origurl = null) {
   var param = urlParam.split("&");
-  console.log(param);
   var paramArray = [];
 
   // Decompose address into elements
@@ -2119,8 +2130,6 @@ function load(urlParam, type = "url", origurl = null) {
     var paramItem = param[i].split("=");
     paramArray[paramItem[0]] = paramItem[1];
   }
-
-  console.log(paramArray);
 
   if (paramArray.p && paramArray.p.substring(0, 4) === "http") {
     create();
@@ -2137,9 +2146,6 @@ function load(urlParam, type = "url", origurl = null) {
     loadver1(paramArray, rtext);
     return;
   }
-
-  // Use E
-  document.getElementById("saveimagename").value = paramArray.e;
 
   // load default settings
   var rtext_para = rtext[0].split(",");
