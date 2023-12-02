@@ -1685,6 +1685,11 @@
             document.head.appendChild(script);
         }
         document.getElementById('version-number').innerHTML = ver;
+        var searchParams = new URLSearchParams(window.location.hash.substring(1));
+        var e = searchParams.get('e');
+        if(e != null){
+            document.getElementById('saveimagename').value = "Enigme" + e;
+        }
     </script>
 </body>
 
