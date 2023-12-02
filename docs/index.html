@@ -1700,8 +1700,10 @@
                 document.getElementById("canvas").style.height = windowWidth + "px";
             }
         }
+        resizeCanvas();
         window.addEventListener('resize', resizeCanvas, false);
         window.addEventListener("load", resizeCanvas, false);
+        resizeCanvas();
     </script>
 </body>
 
