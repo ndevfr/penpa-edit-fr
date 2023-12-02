@@ -2138,7 +2138,7 @@ function load(urlParam, type = "url", origurl = null) {
   // Use E
   var image_name = paramArray.e;
   if (image_name) {
-    document.getElementBuId("saveimagename").value = image_name;
+    document.getElementById("saveimagename").value = image_name;
   }
 
   // load default settings
