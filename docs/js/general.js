@@ -72,6 +72,7 @@ function boot() {
     create();
   }
   resizeCanvas();
+  window.addEventListener("resize", resizeCanvas, false);
 }
 
 function boot_parameters() {
