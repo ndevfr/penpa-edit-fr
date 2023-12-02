@@ -2136,10 +2136,7 @@ function load(urlParam, type = "url", origurl = null) {
   }
 
   // Use E
-  var image_name = paramArray.e;
-  if (image_name) {
-    document.getElementById("saveimagename").value = image_name;
-  }
+  document.getElementById("saveimagename").value = paramArray.e;
 
   // load default settings
   var rtext_para = rtext[0].split(",");
