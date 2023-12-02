@@ -9,7 +9,7 @@ const Identity = {
 
   solveTitle: undefined,
   solveDefaultMessage: "Félicitations 🙂",
-  solveOKButtonText: "Génial !",
+  solveOKButtonText: "D'accord, je garde ça précieusement !",
 
   incorrectMessage: "Essayez encore...",
 
