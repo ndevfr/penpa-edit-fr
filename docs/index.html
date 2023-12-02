@@ -706,11 +706,9 @@
             <div id="bottom_button">
                 <span class="tooltip">
                     <button id="tb_undo" class="button" disabled>Annuler</button>
-                    <span id="undo_text" class="tooltiptext">CTRL + z</span>
                 </span>
                 <span class="tooltip">
                     <button id="tb_redo" class="button" disabled>Rétablir</button>
-                    <span id="redo_text" class="tooltiptext">CTRL + y</span>
                 </span>
                 <span class="tooltip" style="display:none;">
                     <button id="tb_reset" class="button">Effacer le mode sélectionné</button>
@@ -718,7 +716,9 @@
                 </span>
                 <span class="tooltip">
                     <button id="tb_delete" class="button">Tout effacer</button>
-                    <span id="erase_text" class="tooltiptext">Effacer la grille</span>
+                </span>
+                <span class="tooltip">
+                    <button id="tb_save" class="button" onclick="saveimage_download();">Sauvegarder image</button>
                 </span>
                 <br>
             </div>
@@ -908,9 +908,9 @@
             <h3 class="modal-header" id="saveimagetitle">Save screenshot</h3>
             <div id="modal-image-body">
                 <h4><label class="label_imagespace" id="nb_margin_lb">White border:</label></h4>
-                <input type="radio" name="nb_margin" value="1" id="nb_margin1" checked="checked">
+                <input type="radio" name="nb_margin" value="1" id="nb_margin1">
                 <label for="nb_margin1" class="label" id="nb_margin1_lb">Yes</label>
-                <input type="radio" name="nb_margin" value="2" id="nb_margin2">
+                <input type="radio" name="nb_margin" value="2" id="nb_margin2" checked="checked">
                 <label for="nb_margin2" class="label" id="nb_margin2_lb">No</label>
                 <br>
                 <h4><label class="label_imagespace" id="nb_quality_lb">Image quality:</label></h4>
