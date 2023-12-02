@@ -1626,7 +1626,7 @@ function DeleteCheck() {
     text = "solution";
   }
   Swal.fire({
-    title: "Effacer tous les éléments du mode " + text.toUpperCase() + " ?",
+    title: "Effacer tous les éléments ?",
     html: '<h4 class="warn">Vous ne pourrez pas revenir en arrière !</h4>',
     icon: "warning",
     showCancelButton: true,
