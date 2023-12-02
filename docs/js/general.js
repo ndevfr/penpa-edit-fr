@@ -2119,6 +2119,8 @@ function load(urlParam, type = "url", origurl = null) {
     paramArray[paramItem[0]] = paramItem[1];
   }
 
+  console.log(paramArray);
+
   if (paramArray.p && paramArray.p.substring(0, 4) === "http") {
     create();
     import_url(paramArray.p);
