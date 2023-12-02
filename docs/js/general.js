@@ -16,6 +16,19 @@ function infoMsg(html) {
   });
 }
 
+function resizeCanvas() {
+  var windowWidth = window.innerWidth;
+  if (windowWidth < 420) {
+    var ratio = windowWidth / 420;
+    document.getElementById("dvique").style.width = windowWidth + "px";
+    document.getElementById("dvique").style.height = windowWidth + "px";
+    if (document.getElementById("canvas") != null) {
+      document.getElementById("canvas").style.width = windowWidth + "px";
+      document.getElementById("canvas").style.height = windowWidth + "px";
+    }
+  }
+}
+
 function boot() {
   var obj = document.getElementById("dvique");
   var canvas = document.createElement("canvas");
@@ -58,6 +71,7 @@ function boot() {
   } else {
     create();
   }
+  resizeCanvas();
 }
 
 function boot_parameters() {
