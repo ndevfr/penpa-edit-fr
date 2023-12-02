@@ -2117,6 +2117,9 @@ function load(urlParam, type = "url", origurl = null) {
   for (var i = 0; i < param.length; i++) {
     var paramItem = param[i].split("=");
     paramArray[paramItem[0]] = paramItem[1];
+    if (paramItem[0] === "e") {
+      console.log("e found");
+    }
   }
 
   console.log(paramArray);
