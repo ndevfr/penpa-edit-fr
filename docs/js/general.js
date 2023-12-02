@@ -2135,6 +2135,12 @@ function load(urlParam, type = "url", origurl = null) {
     return;
   }
 
+  // Use E
+  var image_name = paramArray.e;
+  if (image_name) {
+    document.getElementBuId("saveimagename").value = image_name;
+  }
+
   // load default settings
   var rtext_para = rtext[0].split(",");
   UserSettings.gridtype = rtext_para[0];
