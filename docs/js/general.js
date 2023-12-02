@@ -2111,15 +2111,13 @@ function show_shortcuts() {
 
 function load(urlParam, type = "url", origurl = null) {
   var param = urlParam.split("&");
+  console.log(param);
   var paramArray = [];
 
   // Decompose address into elements
   for (var i = 0; i < param.length; i++) {
     var paramItem = param[i].split("=");
     paramArray[paramItem[0]] = paramItem[1];
-    if (paramItem[0] === "e") {
-      console.log("e found");
-    }
   }
 
   console.log(paramArray);
