@@ -115,11 +115,11 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" style="display:none;">
         <span id="title">Setter Mode</span>
         <span id="version-info">Penpa+ v<span id="version-number"></span> &copy; 2020-2023 <button id="page_help">Help</button></span>
     </header>
-    <div id="app-container">
+    <div id="app-container" style="display:none;">
         <div id="tool-container">
             <div id="tool-holder">
                 <div id="top_button">
@@ -705,24 +705,24 @@
             </div>
             <div id="bottom_button">
                 <span class="tooltip">
-                    <button id="tb_undo" class="button" disabled>Undo</button>
+                    <button id="tb_undo" class="button" disabled>Annuler</button>
                     <span id="undo_text" class="tooltiptext">CTRL + z</span>
                 </span>
                 <span class="tooltip">
-                    <button id="tb_redo" class="button" disabled>Redo</button>
+                    <button id="tb_redo" class="button" disabled>Rétablir</button>
                     <span id="redo_text" class="tooltiptext">CTRL + y</span>
                 </span>
                 <span class="tooltip">
-                    <button id="tb_reset" class="button">Erase selected mode</button>
-                    <span id="eraseselect_text" class="tooltiptext">Erase elements that belongs to the selected mode</span>
+                    <button id="tb_reset" class="button">Effacer le mode sélectionné</button>
+                    <span id="eraseselect_text" class="tooltiptext">Effacer les éléments qui appartiennent au mode sélectionné</span>
                 </span>
                 <span class="tooltip">
-                    <button id="tb_delete" class="button">Delete all</button>
-                    <span id="erase_text" class="tooltiptext">Erase problem or solution grid</span>
+                    <button id="tb_delete" class="button">Tout effacer</button>
+                    <span id="erase_text" class="tooltiptext">Effacer la grille des problèmes ou des solutions</span>
                 </span>
                 <br>
             </div>
-            <div id="stop_watch">
+            <div id="stop_watch" style="display:none;">
                 <h1 id="timer" class="values">00:00:00:00:0</h1>
                 <div>
                     <button id="sw_start" class="button sw">Start</button>
