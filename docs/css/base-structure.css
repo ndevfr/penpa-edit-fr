@@ -1314,6 +1314,7 @@ input[type="number"] {
 /* Swal fire - Warnings and Wish */
 .wish {
   color: var(--white);
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .warn {
