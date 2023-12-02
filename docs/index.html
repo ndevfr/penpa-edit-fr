@@ -1701,9 +1701,7 @@
             }
         }
         window.addEventListener('resize', resizeCanvas, false);
-        window.onload = function() {
-            resizeCanvas();
-        }
+        window.addEventListener("load", resizeCanvas, false);
     </script>
 </body>
 
