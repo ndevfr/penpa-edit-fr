@@ -20,11 +20,10 @@ function resizeCanvas() {
   var windowWidth = window.innerWidth;
   if (windowWidth < 420) {
     var ratio = windowWidth / 420;
-    document.getElementById("dvique").style.width = windowWidth + "px";
-    document.getElementById("dvique").style.height = windowWidth + "px";
+    document.getElementById("dvique").style.transform = "scale(" + ratio + ")";
     if (document.getElementById("canvas") != null) {
-      document.getElementById("canvas").style.width = windowWidth + "px";
-      document.getElementById("canvas").style.height = windowWidth + "px";
+      document.getElementById("canvas").style.transform =
+        "scale(" + ratio + ")";
     }
   }
 }
