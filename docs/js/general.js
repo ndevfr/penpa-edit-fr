@@ -70,6 +70,7 @@ function boot() {
   } else {
     create();
   }
+  display_rules();
   //resizeCanvas();
   //window.addEventListener("resize", resizeCanvas, false);
 }
@@ -1029,10 +1030,7 @@ function newsize() {
 }
 
 function display_rules() {
-  Swal.fire({
-    title: "Rules:",
-    html: '<h5 class="info">' + pu.rules + "</h5>",
-  });
+  document.getElementById("txt_rules").innerHTML = pu.rules;
 }
 
 function replay_choice() {
