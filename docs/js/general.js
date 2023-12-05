@@ -2216,7 +2216,7 @@ function load(urlParam, type = "url", origurl = null) {
       .replace(/%2F/g, "=");
     document.getElementById("txt_rules").innerHTML = pu.rules;
     var searchParams = new URLSearchParams(window.location.hash.substring(1));
-    var v = decodeURIComponent(searchParams.get("v"));
+    var v = "https://www.youtube-nocookie.com/embed/" + searchParams.get("v");
     document.getElementById("iframe-video").src = v;
     document.getElementById("saveinforules").value = pu.rules.replace(
       /<br>/g,
