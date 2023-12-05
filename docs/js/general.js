@@ -1031,6 +1031,9 @@ function newsize() {
 
 function display_rules() {
   document.getElementById("txt_rules").innerHTML = pu.rules;
+  var searchParams = new URLSearchParams(window.location.hash.substring(1));
+  var v = decodeURIComponent(searchParams.get("v"));
+  document.getElementById("iframe-video").src = v;
 }
 
 function replay_choice() {
@@ -2212,6 +2215,9 @@ function load(urlParam, type = "url", origurl = null) {
       .replace(/%2E/g, "&")
       .replace(/%2F/g, "=");
     document.getElementById("txt_rules").innerHTML = pu.rules;
+    var searchParams = new URLSearchParams(window.location.hash.substring(1));
+    var v = decodeURIComponent(searchParams.get("v"));
+    document.getElementById("iframe-video").src = v;
     document.getElementById("saveinforules").value = pu.rules.replace(
       /<br>/g,
       "\n"
