@@ -155,6 +155,7 @@
 }
 
 #puzzleinfo,
+#puzzleinfo2,
 #contestinfo {
   color: var(--blueLightMedium);
 }

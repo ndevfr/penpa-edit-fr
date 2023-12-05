@@ -749,6 +749,7 @@ body textarea {
 }
 
 #puzzleinfo,
+#puzzleinfo2,
 #contestinfo {
   width: 400px;
   margin: 0 auto;
