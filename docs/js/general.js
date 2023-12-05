@@ -1032,8 +1032,8 @@ function newsize() {
 function display_rules() {
   document.getElementById("txt_rules").innerHTML = pu.rules;
   var searchParams = new URLSearchParams(window.location.hash.substring(1));
-  var v = decodeURIComponent(searchParams.get("v"));
-  document.getElementById("iframe-video").src = v;
+  document.getElementById("iframe-video").src =
+    "https://www.youtube-nocookie.com/embed/" + searchParams.get("v");
 }
 
 function replay_choice() {
